@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>contacts</title>
+<link rel="icon"  href="images/DLogo.jpg" sizes="16x16"> 	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>  
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha256-OFRAJNoaD8L3Br5lglV7VyLRf0itmoBzWUoM+Sji4/8=" crossorigin="anonymous"></script>
+ 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    
+<link href="https://fonts.googleapis.com/css2?family=Noticia+Text:wght@700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+	
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>   
+<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">	
+<script>
+		
+$(document).ready(function(){
+  $("#btn").click(function(){
+         
+        var name = $("#name").val();
+        if(name =='')
+        {
+          $("#name_error").show();
+          $("#name").addClass("border");
+          return false;
+        }
+        if (!/^[a-zA-Z]*$/g.test(name)) 
+       {
+        $("#name_error1").show();
+        $("#name").addClass("border");
+        return false;
+       }
+
+       var phone =$("#phone").val();
+       if(phone =='')
+       {
+         $("#phone_error").show();
+         $("#phone").addClass("border");
+         return false;
+       }
+        if(!/^[6-9]{1}[0-9]{9}$/g.test(phone))
+       {
+         $("#phone_error1").show();
+         $("#phone").addClass("border");
+         return false;
+
+       }
+      
+       var email =$("#email").val();
+       if(email =='')
+       {
+         $("#email_error").show();
+         $("#email").addClass("border");
+         return false;
+       }
+        if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(email))
+       {
+        $("#email-error1").show();
+        $("#email").addClass("border");
+        return false;  
+       }
+       
+       var address = $("#address").val();
+       if(address =='')
+       {
+         $("#address_error").show();
+         $("#address").addClass("border");
+         return false;
+       }
+       if (!/^[a-zA-Z]*$/g.test(address))
+       {
+         $("#address_error1").show();
+         $("#address").addClass("border");
+         return false;
+       }
+         });
+
+$("#name").click(function(){
+      $("#name").removeClass("border");
+      $("#name_error").hide();
+      $("#name_error1").hide();
+      });
+
+      $("#phone").click(function(){
+      $("#phone").removeClass("border");
+      $("#phone_error").hide();
+      $("#phone_error1").hide();      
+      });
+
+      $("#email").click(function(){
+      $("#email").removeClass("border");
+      $("#email_error").hide();
+      $("#email_error1").hide();
+      });
+
+      $("#address").click(function(){
+      $("#address").removeClass("border");
+      $("#address_error").hide(); 
+      $("#address_error1").hide();
+      });
+});
+
+</script>
+<style>
+  .error
+  {
+    text-align: center;
+  }
+  
+  .border
+  {
+    border:1px solid red!important;
+  }
+  
+  span
+  {
+    display: none;
+  }
+  
+</style>  
+
+</head>
+	
+<body>
+<div class="bg-light fixed-top">
+	<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+  <a class="navbar-brand" href="#"><img src="images/DLogo.jpg" alt="mainlogo" class="logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars " style="color:#fff"></i>
+  </button>
+    
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active" >
+        <a class="nav-link" href="index.html">  Home <span class="sr-only">(current)</span></a>
+      </li>
+	  <li class="nav-item" >
+          <a class="nav-link" href="about.html"> About  </a>
+      </li>        
+
+      <li class="nav-item" >
+        <a class="nav-link" href="work.html">  Work </a>
+      </li>
+      <li class="nav-item" >
+          <a class="nav-link" href="services.html">  Services </a>
+      </li>
+            <li class="nav-item" >
+          <a class="nav-link" href="contacts.html"> Contact  </a>
+      </li>
+    
+  
+       <li class="nav-item" >
+         <a class="nav-link" href="signin.html"><font style="color: #a2bb00"> Sign In/RegisterNow </font></a>
+      </li>
+
+   </ul> 
+</div>    
+</nav>
+    </div>
+    </div>
+
+<div class="communication">
+<img src="images/waterdroplets.jpg" class="water" alt="drop"> 	
+    <div class="double"><font style="color:white; font-family: 'Orbitron', sans-serif">  Let's do something </font><br><font  style="color:white; font-family: 'Orbitron', sans-serif"> great together</font> </div>
+</div>	   
+<div class="container">
+<div class="row no-gutters">
+<div class="col-sm-6 leftcon">
+	<div >
+<h1 style="color: white;font-family: 'Orbitron', sans-serif"> D Car</h1>	
+<ul style="list-style-type:none;">
+ <li> <i class="fas fa-map-marker-alt" style="font-size:12px;color:black"></i> <label style="margin-left: 10px;font-family: 'Orbitron', sans-serif">Industrial Development Colony Mehrauli Road Haryana</label> </li><hr>
+ <li> <i class="fas fa-phone" style="font-size:12px;color:black"></i> <label style="margin-left: 10px;font-family: 'Orbitron', sans-serif">9910662222</label></li><hr>
+ <li> <i class="fas fa-phone" style="font-size:12px;color:black"></i> <label style="margin-left: 10px;font-family: 'Orbitron', sans-serif">7710881111</label></li><hr>
+ <li> <i class="fas fa-envelope" style="font-size:12px;color:black"></i><label style="margin-left: 10px;font-family: 'Orbitron', sans-serif">noreply@envato.com</label></li><hr>
+</ul>
+</div>	
+	</div>
+<div class="col-sm-6">	
+<img src="images/car2-contact-building.jpg" alt="building" class="img-fluid build">	
+</div>	
+</div>	
+</div>
+
+<div class="container">
+<div class="row" style="padding:30px">
+<div class="col-sm-6">
+	 <form onSubmit="return validation()">
+  <div class="form-group">
+    
+    <input type="text" class="form-control"  id="name" placeholder="Enter your Name">
+	  <span id="name_error" class="error" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter username </span>
+    <span id="name_error1" class="error" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter letters only </span>
+  </div>
+  <div class="form-group">
+    
+    <input type="text" class="form-control"  id="phone" placeholder="Enter your Phone Number">
+    <span id="phone_error" class="error" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter phonenumber </span>
+    <span id="phone_error1" class="error" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter correct phonenumber </span>
+  </div>
+ <div class="form-group">
+    
+    <input type="text" class="form-control"  id="email" placeholder="Enter your Email Id">
+    <span id="email_error" class="error" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter email </span>
+    <span id="email_error1" class="error" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter correct email </span>
+  </div>
+		  <div class="form-group">
+ 
+			  <textarea class="form-control" id="address" placeholder="Enter your Address"></textarea>
+        <span id="address_error" class="error" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right;">Please enter address </span>
+        <span id="address_error1" class="error" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter correct address </span>
+			  
+        </div> 
+  <button type="submit" class="button" id="btn" style="font-family: 'Orbitron', sans-serif">Submit</button>
+</form> 
+
+
+</div>
+<div class="col-sm-6">
+<div class="location">
+<h3 style="font-family: 'Orbitron', sans-serif"> Address </h3>
+<p style="font-family: 'Orbitron', sans-serif"> Haryana </p>    
+</div>	
+	
+<div class="timing">
+<h3 style="font-family: 'Orbitron', sans-serif"> Open </h3>
+<p style="font-family: 'Orbitron', sans-serif"> Mon-Fri:10:00 - 20:00 </p>
+<p style="font-family: 'Orbitron', sans-serif"> Sat 10:00 - 16:00  </p>    	
+</div>	
+</div>	
+</div>    
+	</div>
+	
+
+    
+<div class="footer">
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-3">  <img src="images/Logo.jpeg" alt="logodesign" height="150px" width="250px" style="padding-right:40%">     </div>
+    <div class="col-sm-3 "> 
+		<div class="address">
+		
+		<h4 style="font-family: 'Orbitron', sans-serif"> Localization </h4> 
+        <div class="address1">
+        <p style="font-size: 16px;font-family: 'Orbitron', sans-serif"> Industrial Development Colony Mehrauli Road  </p>
+        <p style="font-size: 16px;font-family: 'Orbitron', sans-serif"> Haryana </p>
+     
+           </div>
+        </div>
+        </div>
+    <div class="col-sm-3 ">
+		<div class="address">
+		<h4 style="font-family: 'Orbitron', sans-serif"> Social Medial </h4>
+        <div class="address1">
+        <p style="font-size: 16px;font-family: 'Orbitron', sans-serif"><a href="https://www.facebook.com/"  target="_blank" style="color: white" > <i class="fab fa-facebook" style="color:white"></i>  Facebook </a> </p>
+        <p style="font-size: 16px;font-family: 'Orbitron', sans-serif"><a href="https://twitter.com/"  target="_blank"  style="color: white"> <i class="fab fa-twitter" style="color:white"></i> Twitter </a>  </p>
+        <p style="font-size: 16px;font-family: 'Orbitron', sans-serif"><a href="https://www.google.com/"  target="_blank"  style="color: white"> <i class="fab fa-google-plus" style="color:white"></i> Google+   </a></p>   
+        <p style="font-size: 16px;font-family: 'Orbitron', sans-serif"><a href="https://www.youtube.com/"  target="_blank"  style="color: white"> <i class="fab fa-youtube" style="color:white"></i> Youtube   </a></p>
+        </div>
+        </div>
+        </div>
+    <div class="col-sm-3 ">
+		
+		<div class="meeting">
+		<h4 style="font-family: 'Orbitron', sans-serif"> Consultation </h4>
+        <div class="contact">
+        <p style="font-size: 16px;font-family: 'Orbitron', sans-serif"> <i class="fas fa-phone"></i> 9810332222 </p>
+        <p style="font-size: 16px;font-family: 'Orbitron', sans-serif"> <i class="fas fa-phone"></i> 9810442222 </p>
+		</div>
+    <h4 style="font-family: 'Orbitron', sans-serif"> Email </h4>     
+   <div class="meeting1">
+   <p style="font-size: 16px;font-family: 'Orbitron', sans-serif;color: white"><i class="far fa-envelope" style="color:white"></i> service@dcars.com </p>
+
+   </div> 
+   </div>        
+   </div>
+   </div>
+   </div>
+    </div>	
+</body>
+</html>

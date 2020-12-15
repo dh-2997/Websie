@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+<head>
+	
+<meta charset="utf-8">
+	
+<title> Appointment </title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>  
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha256-OFRAJNoaD8L3Br5lglV7VyLRf0itmoBzWUoM+Sji4/8=" crossorigin="anonymous"></script>
+ 
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">    
+    
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Noticia+Text:wght@700 & display=swap" rel="stylesheet">    
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>   
+<link rel="stylesheet" type="text/css" href="css/responsive.css">	
+<script>
+$(document).ready(function(){
+$("#btn").click(function(){
+	var name = $("#inputname").val();
+  if(name == "")
+  {
+    $("#name_error").show();
+    $("#inputname").addClass("border");
+    return false;
+  }
+   if (!/^[a-zA-Z]*$/g.test(name))
+   {
+    $("#name_error1").show();
+    $("#inputname").addClass("border");
+    return false;
+   }
+
+   
+    
+     var email = $("#inputmail").val();
+     if(email =='')
+     {
+       $("#email-error").show();
+       $("#inputmail").addClass("border");
+       return false;  
+     }
+     if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(email))
+     {
+       $("#email-error1").show();
+       $("#inputmail").addClass("border");
+       return false;  
+     }  
+
+     
+      var address = $("#inputAddress").val();
+      if(address == " ")
+      {
+        $("#address_error").show();
+        $("#inputAddress").addClass("border");
+        return false;
+      }
+      if(!/^[a-zA-z]?([a-zA-z]|[a-zA-z] )*[a-zA-z]$/)
+      {
+        $("#address_error1").show();
+        $("inputAddress").addClass("border");
+        return false;
+      }
+     
+      
+
+      var city = $("#inputCity").val();
+      if(city == " ")
+      {
+        $("#city_error").show();
+        $("#inputCity").addClass("border");
+        return false;
+      }
+      if(!/^[a-zA-Z]*$/g.test(city))
+      {
+        $("#city_error1").show();
+        $("#inputCity").addClass("border");
+        return false;
+      }
+
+      var state = $("#inputState");
+      if(state == " ")
+      {
+        $("#state_error").show();
+        $("#inputState").addClass("border");
+        return false;
+      }
+      if(!/^[a-zA-Z]*$/g.test(state))
+      {
+        $("#state_error1").show();
+        $("#inputState").addClass("border");
+        return false;
+      }
+
+      var zip = $("#inputZip");
+      if(zip == " ")
+      {
+        $("#zip_error").show();
+        $("#inputZip").addClass("border");
+        return false;
+      }
+      if(!/^\d{5}$|^\d{5}-\d{4}$/g.test(zip))
+      {
+        $("#zip_error1").show();
+        $("#inputZip").addClass("border");
+        return false;
+      }
+
+      var cname = $("#inputcname");
+      if(cname == " ")
+      {
+        $("#carname_error").show();
+        $("#inputcname").addClass("border");
+        return false;
+      }
+      if(!/^[a-zA-Z]*$/g.test(cname))
+      {
+        $("#carname_error1").show();
+        $("#inputcname").addClass("border");
+        return false;
+      }
+
+      var cmodel = $("#inputcmodel");
+      if(cmodel == " ")
+      {
+         $("#car_error").show();
+         $("#inputcmodel").addClass("border");
+         return false;
+      }
+      if(!/^[a-zA-Z]*$/g.test(cmodel))
+      {
+        $("#car_error1").show();
+        $("#inputcmodel").addClass("border");
+        return false;
+      }
+});
+
+  $("#inputuname").click(function()
+  {
+    $("#inputuname").removeClass("border");
+    $("#name_error").hide();
+    $("#name_error1").hide();
+  });
+
+ 
+  $("#inputmail").click(function()
+  {
+    $("#inputmail").removeClass("border");
+    $("#email-error").hide();
+    $("#email-error").hide();
+  });
+
+ 
+  $("#inputAddress").click(function()
+  {
+    $("#inputAddress").removeClass("border");
+    $("#address_error").hide();
+    $("#address_error1").hide();
+  });
+
+ 
+  $("#inputCity").click(function()
+  {
+    $("#inputCity").removeClass("border");
+    $("#city_error").hide();
+    $("#city_error1").hide();
+  });
+
+  $("#inputState").click(function()
+  {
+    $("#inputState").removeClass("border");
+    $("#state_error").hide();
+    $("state_error1").hide();
+  });
+
+  $("#inputZip").click(function()
+  {
+    $("#inputZip").removeClass("border");
+    $("#zip_error").hide();
+    $("zip_error1").hide();
+  });
+
+  $("#inputcname").click(function()
+  {
+    $("#inputcname").removeClass("border");
+    $("#carname_error1").hide();
+    $("#carname_error1").hide();
+  });
+
+  $("#inputcmodel").click(function()
+    {
+      $("#inputcmodel").removeClass("border");
+      $("#car_error").hide();
+      $("#car_error1").hide();
+    });
+
+
+});  
+</script>	
+	
+<style>
+	.error
+	{
+		text-align: center;
+	}
+	
+	.border
+	{
+		border:1px solid red!important;
+	}
+	
+	span
+	{
+		display: none;
+	}
+	
+	body
+	{
+		background-image: url("images/appoint.jpg");
+		background-repeat: no-repeat;
+		overflow-x: hidden;
+		background-position: center;
+	}
+</style>	
+</head>
+
+
+
+<body>
+	
+<div class="container" >
+<div class="row"  >
+<div class="col-sm-12">
+<h2 style="color: white;text-align: center;font-family: 'Orbitron', sans-serif;padding: 30px"> Appointment </h2>    
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <label for="inputuname" style="color: white;font-family: 'Orbitron', sans-serif"> <i class="fas fa-user"></i>  Name</label>
+      <input type="text" class="form-control" id="inputname">
+	  <span id="ame_error" class="error_display" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter your Name </span>
+	  <span id="name_error1" class="error display" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter letters only </span>
+             	
+    </div>
+	</div> 
+    
+<div class="form-row"> 
+  <div class="form-group col-md-12">
+  <label for="inputemail" style="color: white;font-family: 'Orbitron', sans-serif"> <i class="fas fa-envelope"></i> Email </label>	
+  <input type="email" class="form-control" id="inputmail">	
+  <span id="email-error" class="error display" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right"> Please enter email  </span>
+  <span id="email-error1" class="error-display" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right"> Please enter correct email </span>
+  </div>	
+ </div>	
+ 
+ <div class="form-row"> 	
+  <div class="form-group col-md-12">
+    <label for="inputAddress" style="color: white;font-family: 'Orbitron', sans-serif"> <i class="far fa-address-card"></i> Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <span id="address_error" class="error_display" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter Address </span>
+    <span id="address_error1" class="error display" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter letters and Numbers  Also </span>
+ </div>
+	</div>	 
+	 
+	
+   <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity" style="color: white"> <i class="fas fa-city"></i> City</label>
+      <input type="text" class="form-control" id="inputCity" >
+	  <span id="city_error" class="error_display" style="color: red;font-size: 18px;float: right">Please enter city </span>
+	  <span id="city_error1" class="error display" style="color: red;font-size: 18px;float: right">Please enter letters only </span>
+      	
+    </div>
+    <div class="form-group col-md-4" style="color: white">
+      <label for="inputState" style="color: white"> <i class="fas fa-location-arrow"></i> State</label>
+      <input type="text"  id="inputState" class="form-control">
+	  <span id="state_error" class="error_display" style="color: red;font-size: 18px;float: right">Please enter state </span>
+	  <span id="state_error1" class="error display" style="color: red;font-size: 18px;float: right">Please enter letters only </span>
+      	
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip" style="color: white"> <i class="fas fa-map-pin"></i> Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+	  <span id="zip_error" class="error_display" style="color: red;font-size: 18px;float: right">Please enter zip code </span>
+	  <span id="zip_error1" class="error display" style="color: red;font-size: 18px;float: right">Please enter numbers only </span>
+      	
+    </div>
+  </div>
+
+  <div class="form-row">	
+  <div class="form-group col-md-6">
+	<label for="inputcname" style="color: white;font-family: 'Orbitron', sans-serif"> <i class="fas fa-car"></i> Car Name</label>	
+	<input type="text" class="form-control" id="inputcname">	
+	<span id="carname_error" class="error_display" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter car name </span>
+	<span id="carname_error1" class="error display" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter letters only </span>
+        
+  </div>
+  <div class="form-group col-md-6">
+  <label for="inputcmodel" style="color: white;font-family: 'Orbitron', sans-serif"> <i class="fas fa-car"></i> Car Model</label>	
+  <input type="text" class="form-control" id="inputcmodel">
+  <span id="car_error" class="error_display" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter carmodel </span>
+  <span id="car_error1" class="error display" style="padding-left: 1px;padding-bottom: 1px;color: red;font-size: 18px;font-weight: 400;float: right">Please enter letters only </span>
+  	 	
+  </div>
+  </div>	  
+<div class="form-row">
+<div class="form-group col-md-12">
+<label for="inputappoint" style="color: white;font-family: 'Orbitron', sans-serif"> <i class="fas fa-calendar-check"></i> Pick Up Date and Time </label> 
+<input type="datetime-local" class="form-control" id="inputappoint" placeholder="Enter Required Date and Time"> 
+</div>	
+</div>	
+	
+<br>
+  <center>	
+  <a href="index.html"><button type="submit" id="btn" class="btn btn-primary" style="font-family: 'Orbitron', sans-serif">Submit</button></a>
+  </center>
+  </form>		
+	</div>	
+	</div>
+	</div>
+	
+	
+</body>
+</html>
